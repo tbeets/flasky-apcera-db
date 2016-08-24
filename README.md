@@ -1,4 +1,4 @@
-# flasky-paas-db
+# flasky-apcera-db
 
 ## Postgres Service Creation
 
