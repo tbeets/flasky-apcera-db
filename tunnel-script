@@ -1,0 +1,7 @@
+#!/bin/sh -eu
+# need to split TARGETH from PORT because colon is special to socat
+: "${CAPSULE:=$1}"
+: "${TARGETH:=$2}"
+: "${PORT:=$3}"
+exec apc capsule pipe -- "${CAPSULE:?}" socat STDIO "TCP4-CONNECT:${TARGETH:?}:${PORT:?}"
+
